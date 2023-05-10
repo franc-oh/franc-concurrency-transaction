@@ -19,8 +19,9 @@
             SELECT A.*
             FROM TB_COUPON A
             WHERE A.ACCOUNT_NO IS NULL
+            AND A.ISS_DATE IS NULL
             AND ROWNUM <= 1
-            /* FOR UPDATE */
+            FOR UPDATE
         ]]>
     </select>
 
